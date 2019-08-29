@@ -30,7 +30,7 @@ int main()
 
     for(iCounter = 0 ; iCounter < AnzahlEinwohner; iCounter ++)
     {
-        // Zählt die Einwohner die Partei 0 wählen
+        // ZÃ¤hlt die Einwohner die Partei 0 wÃ¤hlen
         if(einwohner[iCounter] == 0)
         {
             iNumber++;
@@ -38,12 +38,12 @@ int main()
     }
 
     int lCount = 0;
-    // Wiederhole solange, bis alle Einwohner die gleiche Partei wählen
+    // Wiederhole solange, bis alle Einwohner die gleiche Partei wÃ¤hlen
     while(iNumber != 0 && iNumber != 400)
     {
         lCount = lCount + 1;
 
-        // Zufällige Auswahl einer der 400 Personen
+        // ZufÃ¤llige Auswahl einer der 400 Personen
         person1 = (rand() % (AnzahlEinwohner));
 
         // Mit wem soll die Person sprechen?
@@ -52,11 +52,11 @@ int main()
 
         int iConvince;
 
-        // Entscheindung, ob der zweite Wähler überzeugt wird oder nicht
+        // Entscheindung, ob der zweite WÃ¤hler Ã¼berzeugt wird oder nicht
         // Gibt mit gleicher W'keit die Werte 0 oder 1 aus
         iConvince = rand() % 2;
 
-        // wenn iConvince = 1 dann wird der Wähler überzeugt
+        // wenn iConvince = 1 dann wird der WÃ¤hler Ã¼berzeugt
         if(iConvince == 1)
         {
             einwohner[person2] = einwohner[person1];
