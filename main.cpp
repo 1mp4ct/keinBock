@@ -11,7 +11,10 @@ void Ausgabe(int einwohner[])
     int i;
     int j;
     // Ausgabe der Parteien als Block
+// irgend waaaaaas
 
+    for(int i=0; i<2;i++)
+    {}
     system("cls");
 
     for (j = 0; j < 20; j ++)
