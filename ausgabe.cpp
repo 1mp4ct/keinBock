@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void Ausgabe(int einwohner[])
+void Ausgabe(int einwohner[], int columns, int rows)
 {
     int i;
     int j;
@@ -11,9 +11,11 @@ void Ausgabe(int einwohner[])
 
     system("cls");
 
-    for (j = 0; j < 20; j ++)
+    //columns
+    for (j = 0; j < columns; j ++)
     {
-        for (i = 0 + j * 20; i < 20 + j * 20; i++) {
+        //rows
+        for (i = 0 + j * rows; i < rows + j * rows; i++) {
 
             if(einwohner[i] == 0)
             {

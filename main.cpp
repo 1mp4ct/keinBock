@@ -12,7 +12,9 @@ int main()
 {
     srand( (unsigned) time(NULL));
 
-    const int AnzahlEinwohner = 400;
+    const int columns = 20;
+    const int rows = 20;
+    const int AnzahlEinwohner = columns * rows;
     int AnzahlParteien = 2;
 
     // Array einwohner mit 400 Elementen wird erstellt
@@ -21,7 +23,7 @@ int main()
     // Den Einwohnern wird eine Partei zugeordnet
     Einwohner(einwohner, AnzahlEinwohner, AnzahlParteien);
 
-    Ausgabe(einwohner);
+    Ausgabe(einwohner, columns, rows);
     Sleep(300);
 
     int person1;
@@ -64,7 +66,7 @@ int main()
 
         if (lCount % 10000 == 0)
         {
-            Ausgabe(einwohner);
+            Ausgabe(einwohner, columns, rows);
             cout << lCount << endl;
             Sleep(300);
 
