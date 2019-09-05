@@ -41,7 +41,7 @@ int main()
 
     int lCount = 0;
     // Wiederhole solange, bis alle Einwohner die gleiche Partei wählen
-    while(iNumber != 0 && iNumber != 400)
+    while(iNumber != 0 && iNumber != AnzahlEinwohner)
     {
         lCount = lCount + 1;
 
@@ -72,7 +72,7 @@ int main()
 
             int iCounter;
             iNumber = 0;
-            for(iCounter = 0 ; iCounter < 400; iCounter ++)
+            for(iCounter = 0 ; iCounter < AnzahlEinwohner; iCounter ++)
             {
                 if(einwohner[iCounter] == 0)
                 {
