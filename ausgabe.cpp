@@ -25,13 +25,13 @@ void Ausgabe(int einwohner[], int columns, int rows)
             else
             {
                 HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
-                SetConsoleTextAttribute(hStdOut, FOREGROUND_GREEN);
+                SetConsoleTextAttribute(hStdOut, FOREGROUND_BLUE);
             }
 
             cout << einwohner[i] << " ";
 
             HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
-            SetConsoleTextAttribute(hStdOut, FOREGROUND_RED |FOREGROUND_BLUE |FOREGROUND_GREEN);
+            SetConsoleTextAttribute(hStdOut, FOREGROUND_RED |FOREGROUND_BLUE | FOREGROUND_GREEN);
         }
         cout << endl;
     }
