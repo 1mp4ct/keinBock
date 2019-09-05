@@ -21,20 +21,20 @@ int Nachbar(int person1, int columns, int rows)
           person2 = person1 + (columns - 1);
     }
     // Wenn Person ganz rechts -> Sprung nach ganz links (Prüfen, ob Division von Wert -19 durch 20 ohne Rest)
-    else if ((person1- (columns + 1)) % columns == 0 && p1 == 2)
+    else if ((person1 - (columns - 1)) % columns == 0 && p1 == 2)
         {
-          person2 = person1 - (columns + 1);
+          person2 = person1 - (columns - 1);
         }
 
     // Wenn Person ganz oben und Nachbar oben -> Sprung in letzte Zeile
     else if (person1 < columns && p1 == 0)
         {
-          person2 = columns * rows - (columns - person1);
+          person2 = (columns * rows) - (columns - person1);
         }
-    // Wenn ganz untern und Nachbar unten -> Sprung ans andere Ende des Arrays
-    else if (person1 >= (rows - 1) * columns && p1 == 1)
+    // Wenn ganz untern und Nachbar unten -> Sprung in erste Zeile
+    else if (person1 > (((rows - 1) * columns) - 1) && p1 == 1)
         {
-          person2 = person1 - (rows - 1) * columns;
+          person2 = person1 - ((rows - 1) * columns);
         }
 
     // sonst: Person über/ unter oder direkt neben der ausgewählten Person
