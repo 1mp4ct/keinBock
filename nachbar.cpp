@@ -1,6 +1,6 @@
 
 
-int Nachbar(int person1)
+int Nachbar(int person1, int columns, int rows)
 {
     int p1;
     int person2;
@@ -16,25 +16,25 @@ int Nachbar(int person1)
 
     // Wenn Person ganz links und Person nach links -> Sprung nach ganz rechts (Prüfen, ob Division durch 20 ohne Rest)
 
-    if (person1 % 20 == 0 && p1 == 3)
+    if (person1 % columns == 0 && p1 == 3)
     {
-          person2 = person1 + 19;
+          person2 = person1 + (columns - 1);
     }
     // Wenn Person ganz rechts -> Sprung nach ganz links (Prüfen, ob Division von Wert -19 durch 20 ohne Rest)
-    else if ((person1-19) % 20 == 0 && p1 == 2)
+    else if ((person1- (columns + 1)) % columns == 0 && p1 == 2)
         {
-          person2 = person1 - 19;
+          person2 = person1 - (columns + 1);
         }
 
     // Wenn Person ganz oben und Nachbar oben -> Sprung in letzte Zeile
-    else if (person1 < 20 && p1 == 0)
+    else if (person1 < columns && p1 == 0)
         {
-          person2 = 400 - (20 - person1);
+          person2 = columns * rows - (columns - person1);
         }
     // Wenn ganz untern und Nachbar unten -> Sprung ans andere Ende des Arrays
-    else if (person1 > 379 && p1 == 1)
+    else if (person1 >= (rows - 1) * columns && p1 == 1)
         {
-          person2 = person1 - 380;
+          person2 = person1 - (rows - 1) * columns;
         }
 
     // sonst: Person über/ unter oder direkt neben der ausgewählten Person
@@ -43,12 +43,12 @@ int Nachbar(int person1)
         switch (p1){
           // Fall 0: Person über person1
         case 0:
-          person2 = person1 - 20;
+          person2 = person1 - columns;
           break;
 
         // Fall 1: Person unter person1
         case 1:
-          person2 = person1 + 20;
+          person2 = person1 + columns;
           break;
 
          // Fall 2: Person rechts von person1

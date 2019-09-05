@@ -50,7 +50,7 @@ int main()
 
         // Mit wem soll die Person sprechen?
         int person2;
-        person2 = Nachbar(person1);
+        person2 = Nachbar(person1, columns, rows);
 
         int iConvince;
 
